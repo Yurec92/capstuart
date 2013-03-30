@@ -1,0 +1,19 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+ 
+	<bean id="groupDAO" class="com.webapptest.model.dao.GroupDAO">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="sectionDAO" class="com.webapptest.model.dao.SectionDAO">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="imageDAO" class="com.webapptest.model.dao.ImageDAO">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="sliderimageDAO" class="com.webapptest.model.dao.SliderimageDAO">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+ 
+</beans>
