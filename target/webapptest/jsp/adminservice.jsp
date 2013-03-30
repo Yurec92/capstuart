@@ -22,28 +22,28 @@
 <div class="container content">
 <h2>Admin Service</h2>
 <div class="row-fluid">
-<div class="span6"
+<div class="span6">
 <form id="addSectionForm" name="addSectionForm" action="adminservice/newsection" method="POST" enctype="multipart/form-data">
 <h3>Создание нового раздела</h3>
 <h5>Имя раздела:</h5><input type="text" name="name">
 <br>
 <h5>Фотография раздела:</h5><input type="file" name="fileOfImage">
 <br><br>
-<input type="submit" value="Add" class="btn btn-info">
+<input type="submit" value="Add" name="lala1" class="btn btn-info">
 </form>
 </div>
-<div class="span6"
+<div class="span6">
 <form id="addGroupForm" name="addGroupForm" action="adminservice/newgroup" method="POST" enctype="multipart/form-data">
 <h3>Создание новой группы</h3>
 <h5>Имя группы:</h5><input type="text" name="name">
 <br><br>
-<input type="submit" value="Add" class="btn btn-info">
+<input type="submit" value="Add" name="lala2" class="btn btn-info">
 </form>
 </div>
 </div>
 
 <div class="row-fluid">
-<div class="span6"
+<div class="span6">
 <form id="addImageForm" name="addImageForm" action="adminservice/newimage" method="POST" enctype="multipart/form-data">
 <h3>Загрузка фото в галлерею</h3>
 <input type="file" name="fileOfImage">
@@ -61,16 +61,16 @@
 			</c:forEach>
 </select>
 <br><br>
-<input type="submit" value="Add" class="btn btn-info">
+<input type="submit" value="Add" name="lala3" class="btn btn-info">
 </form>
 </div>
 
-<div class="span6"
+<div class="span6">
 <form id="addSliderImageForm" name="addSliderImageForm" action="adminservice/newsliderimage" method="POST" enctype="multipart/form-data">
 <h3>Загрузка фото в слайдер</h3>
 <input type="file" name="fileOfImage">
 <br><br>
-<input type="submit" value="Add" >
+<input type="submit" value="Add" name="lala4" class="btn btn-info">
 </form>
 </br>
 </br>
