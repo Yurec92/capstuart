@@ -114,16 +114,27 @@ public final class gallery_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t");
       if (_jspx_meth_c_005fimport_005f0(_jspx_page_context))
         return;
-      out.write("<h3>My portfolio</h3>\r\n");
+      out.write("<div class=\"navbar\">\r\n");
+      out.write("\t\t\t\t<div class=\"navbar-inner\">\t\t\r\n");
+      out.write("\t\t\t\t<ul class=\"nav\">\r\n");
+      out.write("\t\t\t\t\t");
+      if (_jspx_meth_c_005fforEach_005f0(_jspx_page_context))
+        return;
+      out.write("</ul>\r\n");
+      out.write("\t\t\t\t</div>\t\t\t\r\n");
+      out.write("\t\t\t</div>\r\n");
+      out.write("\t\t\t\r\n");
+      out.write("\t\t\t\r\n");
+      out.write("\t\t\t\r\n");
       out.write("\t\t\t<table>\r\n");
       out.write("\t\t\t\t<tr>\r\n");
       out.write("\t\t\t\t");
-      if (_jspx_meth_c_005fforEach_005f0(_jspx_page_context))
+      if (_jspx_meth_c_005fforEach_005f1(_jspx_page_context))
         return;
       out.write("</tr>\r\n");
       out.write("\t\t\t\t<tr>\r\n");
       out.write("\t\t\t\t");
-      if (_jspx_meth_c_005fforEach_005f1(_jspx_page_context))
+      if (_jspx_meth_c_005fforEach_005f2(_jspx_page_context))
         return;
       out.write("</tr>\r\n");
       out.write("\t\t\t</table>\r\n");
@@ -372,16 +383,17 @@ public final class gallery_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005fforEach_005f0.setParent(null);
-    // /jsp/gallery.jsp(30,4) name = items type = javax.el.ValueExpression reqTime = true required = false fragment = false deferredValue = true expectedTypeName = java.lang.Object deferredMethod = false methodSignature = null
-    _jspx_th_c_005fforEach_005f0.setItems(new org.apache.jasper.el.JspValueExpression("/jsp/gallery.jsp(30,4) '${groups}'",_el_expressionfactory.createValueExpression(_jspx_page_context.getELContext(),"${groups}",java.lang.Object.class)).getValue(_jspx_page_context.getELContext()));
-    // /jsp/gallery.jsp(30,4) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /jsp/gallery.jsp(30,5) name = items type = javax.el.ValueExpression reqTime = true required = false fragment = false deferredValue = true expectedTypeName = java.lang.Object deferredMethod = false methodSignature = null
+    _jspx_th_c_005fforEach_005f0.setItems(new org.apache.jasper.el.JspValueExpression("/jsp/gallery.jsp(30,5) '${groups}'",_el_expressionfactory.createValueExpression(_jspx_page_context.getELContext(),"${groups}",java.lang.Object.class)).getValue(_jspx_page_context.getELContext()));
+    // /jsp/gallery.jsp(30,5) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f0.setVar("group");
     int[] _jspx_push_body_count_c_005fforEach_005f0 = new int[] { 0 };
     try {
       int _jspx_eval_c_005fforEach_005f0 = _jspx_th_c_005fforEach_005f0.doStartTag();
       if (_jspx_eval_c_005fforEach_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
-          out.write("<td><a href=\"");
+          out.write("<li>\r\n");
+          out.write("\t\t\t\t\t<td><a href=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${api_url}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("/group/");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${group.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
@@ -389,7 +401,8 @@ public final class gallery_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write('>');
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${group.name}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("</a></td>\t\t\t\t\t\t\t\r\n");
-          out.write("\t\t\t\t");
+          out.write("\t\t\t\t</li>\r\n");
+          out.write("\t\t\t\t<li class=\"divider-vertical\"></li>");
           int evalDoAfterBody = _jspx_th_c_005fforEach_005f0.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -417,19 +430,23 @@ public final class gallery_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f1 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f1.setPageContext(_jspx_page_context);
     _jspx_th_c_005fforEach_005f1.setParent(null);
-    // /jsp/gallery.jsp(35,4) name = items type = javax.el.ValueExpression reqTime = true required = false fragment = false deferredValue = true expectedTypeName = java.lang.Object deferredMethod = false methodSignature = null
-    _jspx_th_c_005fforEach_005f1.setItems(new org.apache.jasper.el.JspValueExpression("/jsp/gallery.jsp(35,4) '${photos}'",_el_expressionfactory.createValueExpression(_jspx_page_context.getELContext(),"${photos}",java.lang.Object.class)).getValue(_jspx_page_context.getELContext()));
-    // /jsp/gallery.jsp(35,4) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_c_005fforEach_005f1.setVar("photo");
+    // /jsp/gallery.jsp(42,4) name = items type = javax.el.ValueExpression reqTime = true required = false fragment = false deferredValue = true expectedTypeName = java.lang.Object deferredMethod = false methodSignature = null
+    _jspx_th_c_005fforEach_005f1.setItems(new org.apache.jasper.el.JspValueExpression("/jsp/gallery.jsp(42,4) '${groups}'",_el_expressionfactory.createValueExpression(_jspx_page_context.getELContext(),"${groups}",java.lang.Object.class)).getValue(_jspx_page_context.getELContext()));
+    // /jsp/gallery.jsp(42,4) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_c_005fforEach_005f1.setVar("group");
     int[] _jspx_push_body_count_c_005fforEach_005f1 = new int[] { 0 };
     try {
       int _jspx_eval_c_005fforEach_005f1 = _jspx_th_c_005fforEach_005f1.doStartTag();
       if (_jspx_eval_c_005fforEach_005f1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
-          out.write("<td><img src=\"");
-          if (_jspx_meth_c_005furl_005f10(_jspx_th_c_005fforEach_005f1, _jspx_page_context, _jspx_push_body_count_c_005fforEach_005f1))
-            return true;
-          out.write("\" width=\"150\" height=\"150\"></td>\t\t\t\t\t\t\t\r\n");
+          out.write("<td><a href=\"");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${api_url}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("/group/");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${group.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write('"');
+          out.write('>');
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${group.name}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("</a></td>\t\t\t\t\t\t\t\r\n");
           out.write("\t\t\t\t");
           int evalDoAfterBody = _jspx_th_c_005fforEach_005f1.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -450,15 +467,56 @@ public final class gallery_jsp extends org.apache.jasper.runtime.HttpJspBase
     return false;
   }
 
-  private boolean _jspx_meth_c_005furl_005f10(javax.servlet.jsp.tagext.JspTag _jspx_th_c_005fforEach_005f1, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_005fforEach_005f1)
+  private boolean _jspx_meth_c_005fforEach_005f2(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:forEach
+    org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f2 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
+    _jspx_th_c_005fforEach_005f2.setPageContext(_jspx_page_context);
+    _jspx_th_c_005fforEach_005f2.setParent(null);
+    // /jsp/gallery.jsp(47,4) name = items type = javax.el.ValueExpression reqTime = true required = false fragment = false deferredValue = true expectedTypeName = java.lang.Object deferredMethod = false methodSignature = null
+    _jspx_th_c_005fforEach_005f2.setItems(new org.apache.jasper.el.JspValueExpression("/jsp/gallery.jsp(47,4) '${photos}'",_el_expressionfactory.createValueExpression(_jspx_page_context.getELContext(),"${photos}",java.lang.Object.class)).getValue(_jspx_page_context.getELContext()));
+    // /jsp/gallery.jsp(47,4) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_c_005fforEach_005f2.setVar("photo");
+    int[] _jspx_push_body_count_c_005fforEach_005f2 = new int[] { 0 };
+    try {
+      int _jspx_eval_c_005fforEach_005f2 = _jspx_th_c_005fforEach_005f2.doStartTag();
+      if (_jspx_eval_c_005fforEach_005f2 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        do {
+          out.write("<td><img src=\"");
+          if (_jspx_meth_c_005furl_005f10(_jspx_th_c_005fforEach_005f2, _jspx_page_context, _jspx_push_body_count_c_005fforEach_005f2))
+            return true;
+          out.write("\" width=\"150\" height=\"150\"></td>\t\t\t\t\t\t\t\r\n");
+          out.write("\t\t\t\t");
+          int evalDoAfterBody = _jspx_th_c_005fforEach_005f2.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+      }
+      if (_jspx_th_c_005fforEach_005f2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_c_005fforEach_005f2[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_c_005fforEach_005f2.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_c_005fforEach_005f2.doFinally();
+      _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems.reuse(_jspx_th_c_005fforEach_005f2);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_c_005furl_005f10(javax.servlet.jsp.tagext.JspTag _jspx_th_c_005fforEach_005f2, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_005fforEach_005f2)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  c:url
     org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_005furl_005f10 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
     _jspx_th_c_005furl_005f10.setPageContext(_jspx_page_context);
-    _jspx_th_c_005furl_005f10.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f1);
-    // /jsp/gallery.jsp(36,19) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_c_005furl_005f10.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f2);
+    // /jsp/gallery.jsp(48,19) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005furl_005f10.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("/${photo.pathToFile}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
     int _jspx_eval_c_005furl_005f10 = _jspx_th_c_005furl_005f10.doStartTag();
     if (_jspx_th_c_005furl_005f10.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {

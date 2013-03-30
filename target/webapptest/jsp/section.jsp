@@ -22,6 +22,16 @@
 	<div class="container-fluid">
 		<div class="row-fluid">
 		<c:import url="/jsp/navigation.jsp" />		
+		<div class="navbar">
+				<div class="navbar-inner">		
+				<ul class="nav">
+					<c:forEach items="${groups}" var="gr"><li>
+					<td><a href="${api_url}/group/${gr.id}">${gr.name}</a></td>							
+				</li>
+				<li class="divider-vertical"></li></c:forEach>
+				</ul>
+				</div>			
+			</div>
 		<h3>Section ${section.name}</h3>
 		<table>
 			<tr>

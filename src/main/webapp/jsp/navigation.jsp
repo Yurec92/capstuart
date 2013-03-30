@@ -12,12 +12,10 @@
 		<li><a href="${api_url}/contact">Contacts</a></li>
 	</ul>
 	<ul class="nav pull-right">
-	<table align="center"><tr>
-	<td><li><a border="0" href="http://vkontakte.ru/share.php?url=http%3A%2F%2Fwww.photocap.ru%2F"><img src="http://www.akm.ru/rus/img/img_odnaknopka/112.gif"></a></li></td>
-	<td><li><a border="0" href="http://www.facebook.com?url=http%3A%2F%2Fwww.photocap.ru%2F"><img src="http://www.akm.ru/rus/img/img_odnaknopka/113.gif"></a></li></td>
+	<li><a border="0" href="http://vkontakte.ru/"><img src="/webapptest/img/vk.jpg"></a></li>
+	<li><a border="0" href="http://www.facebook.com"><img src="/webapptest/img/fc.jpg"></a></li>
 	</ul>
-	</tr>
-	</table>
+	
 	
 	</div>	
 	

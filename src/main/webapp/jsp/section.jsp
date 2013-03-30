@@ -5,7 +5,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-
+<c:url value="/site/main" var="api_url" />
 <head>
 <META http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <script type="text/javascript" src="<c:url value="/js/jquery.js"/>"></script>
@@ -22,6 +22,16 @@
 	<div class="container-fluid">
 		<div class="row-fluid">
 		<c:import url="/jsp/navigation.jsp" />		
+		<div class="navbar">
+				<div class="navbar-inner">		
+				<ul class="nav">
+					<c:forEach items="${groups}" var="gr"><li>
+					<td><a href="${api_url}/group/${gr.id}">${gr.name}</a></td>							
+				</li>
+				<li class="divider-vertical"></li></c:forEach>
+				</ul>
+				</div>			
+			</div>
 		<h3>Section ${section.name}</h3>
 		<table>
 			<tr>

@@ -74,12 +74,10 @@ public final class navigation_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("/contact\">Contacts</a></li>\r\n");
       out.write("\t</ul>\r\n");
       out.write("\t<ul class=\"nav pull-right\">\r\n");
-      out.write("\t<table align=\"center\"><tr>\r\n");
-      out.write("\t<td><li><a border=\"0\" href=\"http://vkontakte.ru/share.php?url=http%3A%2F%2Fwww.photocap.ru%2F\"><img src=\"http://www.akm.ru/rus/img/img_odnaknopka/112.gif\"></a></li></td>\r\n");
-      out.write("\t<td><li><a border=\"0\" href=\"http://www.facebook.com?url=http%3A%2F%2Fwww.photocap.ru%2F\"><img src=\"http://www.akm.ru/rus/img/img_odnaknopka/113.gif\"></a></li></td>\r\n");
+      out.write("\t<li><a border=\"0\" href=\"http://vkontakte.ru/\"><img src=\"/webapptest/img/vk.jpg\"></a></li>\r\n");
+      out.write("\t<li><a border=\"0\" href=\"http://www.facebook.com\"><img src=\"/webapptest/img/fc.jpg\"></a></li>\r\n");
       out.write("\t</ul>\r\n");
-      out.write("\t</tr>\r\n");
-      out.write("\t</table>\r\n");
+      out.write("\t\r\n");
       out.write("\t\r\n");
       out.write("\t</div>\t\r\n");
       out.write("\t\r\n");

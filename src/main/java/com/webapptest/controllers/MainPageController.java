@@ -47,6 +47,7 @@ public class MainPageController {
         ModelAndView mav = new ModelAndView("section");
         mav.addObject("sectionPhotos", _imageDAO.findByIdOfSection(Integer.parseInt(id)));
 		mav.addObject("section", _sectionDAO.findById(Integer.parseInt(id)));
+		mav.addObject("groups", _groupDAO.findAll());
         return mav;
     }
 	@RequestMapping(value = "/group/{id}", method = RequestMethod.GET)
@@ -54,6 +55,7 @@ public class MainPageController {
         ModelAndView mav = new ModelAndView("group");
         mav.addObject("groupPhotos", _imageDAO.findByIdOfGroup(Integer.parseInt(id)));
 		mav.addObject("group", _groupDAO.findById(Integer.parseInt(id)));
+		mav.addObject("groups", _groupDAO.findAll());
         return mav;
     }
 	@RequestMapping(value = "/gallery", method = RequestMethod.GET)
