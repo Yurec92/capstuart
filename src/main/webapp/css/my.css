@@ -11,16 +11,18 @@ body {
 				margin: 0 auto;
 				width: 300;
 				height:300;
+				top: 50%;
+				
 			}
 			
 			#ui-carousel-next, #ui-carousel-prev {
-				width: 60px;
-				height: 100px;
+				width: 20px;
+				height: 20px;
 				background: url(/webapptest/img/arrow-left.png) #fff center center no-repeat;
 				display: block;
 				position: absolute;
-				top: 0;
-				z-index: 100;
+				top: 50%;
+				
 			}
 
 			#ui-carousel-next {

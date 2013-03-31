@@ -15,34 +15,40 @@
 <link type="text/css" rel="stylesheet" media="all"	href="<c:url value="/css/style.css"/>" />
 <link type="text/css" rel="stylesheet" media="all"	href="<c:url value="/css/bootstrap.min.css"/>" />
 <link type="text/css" rel="stylesheet" media="all"	href="<c:url value="/css/screen.css"/>" />
-<script type="text/javascript" src="<c:url value="/js/easySlider1.7.js"/>"></script>
+<script type="text/javascript" src="<c:url value="/js/easySlider1js"/>"></script>
 <link type="text/css" rel="stylesheet" media="all"	href="<c:url value="/css/my.css"/>" />
 <script type="text/javascript"	src="<c:url value="/js/jquery.featureCarousel.min.js"/>"></script>
 <script type="text/javascript" src="<c:url value="/js/jquery.ui.core.js"/>"></script>
 <script type="text/javascript" src="<c:url value="/js/jquery.ui.widget.js"/>"></script>
 <script type="text/javascript" src="<c:url value="/js/jquery.ui.rcarousel.js"/>"></script>
 
+<link type="text/css" rel="stylesheet" media="all"	href="<c:url value="/css/flexslider.css"/>" />
+<script type="text/javascript" src="<c:url value="/js/jquery.flexslider.js"/>"></script>
+<script type="text/javascript" src="<c:url value="/js/modernizr.js"/>"></script>
+
+
+
+
 <title>capStuart - main</title>
 </head>
 <body>
 <c:import url="/jsp/navigation.jsp" />									
 
-		<div id="slider">
-			<ul>		
-			<c:forEach items="${slider}" var="slide">		
-				<li><img  src="<c:url value="/${slide.pathToFile}"/>" width="100%" height="600"></li>
-			</c:forEach>
-			</ul>
-		</div>	
-<BR>
+
+
+        <div class="flexslider">
+          <ul class="slides"><c:forEach items="${slider}" var="slide">
+            <li><img  src="<c:url value="/${slide.pathToFile}"/>" ></li>
+				</c:forEach>
+          </ul>
+        </div>
 
 <div id="content">	
 	<div id="carousel">
 		<c:forEach items="${sections}" var="section">
 		<div style="background:url(<c:url value="/${section.pathToFile}"/>);">
 		<h5><span>
-		<a href="main/section/${section.id}">${section.name}</a></span></h5>
-	
+		<a href="main/section/${section.id}">${section.name}</a></span></h5>	
 	<style>
 	span {
 	color			: white;
@@ -50,12 +56,12 @@
 	letter-spacing		: -1px;
 	background		: rgba(0, 0, 0, 0.7);
 	padding			: 10px;
-}
-a {font-size:16px; color:white; font-weight:bold}
-a:hover {font-size:16px; color:#ff6600; font-weight:bold}
-</style>
-		</div>
-		</c:forEach>
+	}
+	a {font-size:16px; color:white; font-weight:bold}
+	a:hover {font-size:16px; color:#ff6600; font-weight:bold}
+	</style>
+	</div>
+	</c:forEach>
 	</div>
 	<a href="#" id="ui-carousel-next"><span>next</span></a>
 	<a href="#" id="ui-carousel-prev"><span>prev</span></a>
@@ -69,19 +75,12 @@ a:hover {font-size:16px; color:#ff6600; font-weight:bold}
 
 </body>
 <script type="text/javascript">
-		$(document).ready(function(){	
-			$("#slider").easySlider({
-				auto: true, 
-				continuous: true,
-				pause:2800,
-				numeric: false
-			});
-		});	
+	
 		
 		jQuery(function($) {
 				$( "#carousel ").rcarousel({
 					margin: 10,
-					width: 300,
+					width: 350,
 					height: 200
 				});
 				
@@ -96,5 +95,20 @@ a:hover {font-size:16px; color:#ff6600; font-weight:bold}
 						}
 					);					
 			});
+	$(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "fade",
+		slideshowSpeed: 4000, 
+		controlNav: false,
+		pauseOnAction: false,
+		pauseOnHover: false,
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
 </script>
 </html>
