@@ -15,5 +15,5 @@
 	<bean id="sliderimageDAO" class="com.webapptest.model.dao.SliderimageDAO">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
- 
+
 </beans>

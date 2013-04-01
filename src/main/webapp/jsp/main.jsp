@@ -43,13 +43,20 @@
           </ul>
         </div>
 
-<div id="content">	
+	
 	<div id="carousel">
 		<c:forEach items="${sections}" var="section">
 		<div style="background:url(<c:url value="/${section.pathToFile}"/>);">
 		<h5><span>
-		<a href="main/section/${section.id}">${section.name}</a></span></h5>	
-	<style>
+		<a href="main/section/${section.name}">${section.name}</a></span></h5>	
+		</div>
+		</c:forEach>
+	</div>
+	<a href="#" id="ui-carousel-next"><span>next</span></a>
+	<a href="#" id="ui-carousel-prev"><span>prev</span></a>
+
+		<style>
+	html{ overflow-x:hidden;}
 	span {
 	color			: white;
 	font			: bold 20px/40px Helvetica, Sans-Serif;
@@ -57,19 +64,10 @@
 	background		: rgba(0, 0, 0, 0.7);
 	padding			: 10px;
 	}
-	a {font-size:16px; color:white; font-weight:bold}
+	a {font-size:16px; color:grey; }
 	a:hover {font-size:16px; color:#ff6600; font-weight:bold}
 	</style>
-	</div>
-	</c:forEach>
-	</div>
-	<a href="#" id="ui-carousel-next"><span>next</span></a>
-	<a href="#" id="ui-carousel-prev"><span>prev</span></a>
-</div>
-		
   
-
-
 
 <c:import url="/jsp/footer.jsp" />
 
@@ -87,12 +85,8 @@
 				$( "#ui-carousel-next" )
 					.add( "#ui-carousel-prev" )
 					.hover(
-						function() {
-							$( this ).css( "opacity", 0.7 );
-						},
-						function() {
-							$( this ).css( "opacity", 0.7 );
-						}
+						function() {$( this ).css( "opacity", 0.7 );},
+						function() {$( this ).css( "opacity", 1 );}
 					);					
 			});
 	$(function(){

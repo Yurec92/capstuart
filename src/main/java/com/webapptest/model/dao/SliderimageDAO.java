@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import com.webapptest.model.entity.Sliderimage;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import java.util.Map;
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 
 
 public class SliderimageDAO
@@ -44,6 +46,23 @@ public class SliderimageDAO
 	{
 		String sql="INSERT INTO SLIDERIMAGES(`NAME`,`PATHTOFILE`) VALUES(?,?)";
 		jdbcTemplate.update(sql,new Object[]{name,pathToFile});
+	}
+	public void delete(String name)
+	{
+		String sql="DELETE FROM SLIDERIMAGES WHERE NAME=?";
+		jdbcTemplate.update(sql,new Object[]{name});		
+	}
+	public Sliderimage findByName(String name)
+	{
+	
+		String sql = "SELECT * FROM SLIDERIMAGES WHERE NAME=?";
+		try{
+			return (Sliderimage)jdbcTemplate.queryForObject(sql,new Object[]{name},new BeanPropertyRowMapper(Sliderimage.class));
+		}
+		catch (EmptyResultDataAccessException e)
+		{
+			return null;
+		}
 	}
 	
 }

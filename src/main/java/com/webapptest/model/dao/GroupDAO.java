@@ -13,6 +13,7 @@ import com.webapptest.model.entity.Group;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import java.util.Map;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.dao.EmptyResultDataAccessException;
 
 public class GroupDAO
 {
@@ -23,12 +24,25 @@ public class GroupDAO
 	}
 	
 	
-	public void addGroup(String name) {
+	public void addGroup(Group group) {
  
 		String sql = "INSERT INTO GROUPS(`NAME`) VALUES(?)";
  
-		jdbcTemplate.update(sql, new Object[]{name});
+		jdbcTemplate.update(sql, new Object[]{group.getName()});
  
+	}
+	
+	public Group findByName(String name)
+	{
+		String sql = "SELECT * FROM GROUPS WHERE NAME=?";
+		try{
+		Group group=(Group)jdbcTemplate.queryForObject(sql,new Object[]{name},new BeanPropertyRowMapper(Group.class));
+		return group;
+		}
+		catch (EmptyResultDataAccessException e)
+		{
+			return null;
+		}
 	}
 	
 	
@@ -53,5 +67,11 @@ public class GroupDAO
 	}
  
 	return groups;
-}
+	}
+	public void delete(String name)
+	{
+		String sql="DELETE FROM GROUPS WHERE NAME=?";
+		jdbcTemplate.update(sql,new Object[]{name});		
+	}
+
 }

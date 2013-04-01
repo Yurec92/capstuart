@@ -1,0 +1,49 @@
+.photos{cursor:pointer;}
+
+/* Glisse: Overlay */
+#glisse-overlay {
+  background: rgba(0,0,0.3);}
+
+#glisse-close {
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  position: fixed;
+  top:50px;
+  right:40px;
+  background:url(/webapptest/img/close.png);
+  background-color:rgba(d,d,d,0.75);}
+
+
+
+/* Prev/Next button */
+.glisse-next a, .glisse-prev a {
+  width: 20px;
+  height: 20px;
+ 
+  display: block;
+  position: fixed;
+  bottom: 10px;
+  background:green}
+
+.glisse-next a {
+  background: url(/webapptest/img/arrow-right.png);
+  left: 50%;
+  margin-left: 20px; }
+
+.glisse-prev a {
+  width: 20px;
+  height: 20px;
+  background: url(/webapptest/img/arrow-left.png);
+  left: 50%;
+  margin-left: -40px; }
+
+/* Legend */
+.glisse-legend {
+  position:fixed;
+  display:block;
+  bottom:10px;
+  left:10px;
+  color:white;
+  background:blue; }
+

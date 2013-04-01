@@ -1,5 +1,21 @@
+ .item {
+ margin: 5px;
+  padding: 5px;
+  background: #D8D5D2;
+  font-size: 11px;
+  line-height: 1.4em;
+  float: left;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+	max-width: 150px; 
+	max-height: 150px; 
+		  }
+
+
+
 body {	
-        background: url(/webapptest/img/fon.jpg) no-repeat center center fixed;
+        background: #FFFFFACD no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -7,11 +23,16 @@ body {
 }
 
 
+
+
+
+
+/*нижний слайдер*/
 #carousel {
 				margin: 0 auto;
-				width: 300;
-				height:300;
 				top: 50%;
+				height: 19%;
+				width: 40%;
 				
 			}
 			
@@ -21,8 +42,7 @@ body {
 				background: url(/webapptest/img/arrow-left.png) #fff center center no-repeat;
 				display: block;
 				position: absolute;
-				top: 50%;
-				
+				top: 74%;				
 			}
 
 			#ui-carousel-next {
@@ -39,18 +59,20 @@ body {
 			}
 
 .ui-carousel {
-	height: 200px;
+	height: 19%;
+	width: 40%;
 	margin: 0;
-	overflow: auto;
+	overflow: hidden;
 	padding: 0;
 	position: relative; /*for ie7 to work e.g in html carousels*/
-	width: 520px
+	
 }
 
 .ui-carousel > .wrapper {
     margin: 0;
     padding: 0;
     width: 9999px;
+	
 }
 
 .ui-carousel > .wrapper > * {
@@ -60,4 +82,5 @@ body {
 	height: 100px;
 	overflow: hidden;
 	width: 100px;	
+	
 }

@@ -8,9 +8,8 @@ public class Group
 	private String _name;
 	
 	public Group() {}
-	public Group(int id,String name)
+	public Group(String name)
 	{
-		_id=id;
 		_name=name;
 	}
 	public void setId(int id)

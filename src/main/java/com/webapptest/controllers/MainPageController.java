@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.ModelAndView;
 import com.webapptest.model.dao.GroupDAO;
+
 import com.webapptest.model.dao.ImageDAO;
 import com.webapptest.model.dao.SliderimageDAO;
 import com.webapptest.model.dao.SectionDAO;
@@ -26,6 +27,7 @@ public class MainPageController {
 
     @Autowired
     GroupDAO _groupDAO;
+	
 	@Autowired
     SectionDAO _sectionDAO;
 	@Autowired
@@ -42,19 +44,19 @@ public class MainPageController {
 		mav.addObject("slider", _sliderDAO.findAll());
         return mav;
     }
-    @RequestMapping(value = "/section/{id}", method = RequestMethod.GET)
-    public ModelAndView getSection(@PathVariable("id") String id) {
+    @RequestMapping(value = "/section/{name}", method = RequestMethod.GET)
+    public ModelAndView getSection(@PathVariable("name") String name) {
         ModelAndView mav = new ModelAndView("section");
-        mav.addObject("sectionPhotos", _imageDAO.findByIdOfSection(Integer.parseInt(id)));
-		mav.addObject("section", _sectionDAO.findById(Integer.parseInt(id)));
+        mav.addObject("sectionPhotos", _imageDAO.findByNameOfSection(name));
+		mav.addObject("section", _sectionDAO.findByName(name));
 		mav.addObject("groups", _groupDAO.findAll());
         return mav;
     }
-	@RequestMapping(value = "/group/{id}", method = RequestMethod.GET)
-    public ModelAndView getGroup(@PathVariable("id") String id) {
+	@RequestMapping(value = "/group/{name}", method = RequestMethod.GET)
+    public ModelAndView getGroup(@PathVariable("name") String name) {
         ModelAndView mav = new ModelAndView("group");
-        mav.addObject("groupPhotos", _imageDAO.findByIdOfGroup(Integer.parseInt(id)));
-		mav.addObject("group", _groupDAO.findById(Integer.parseInt(id)));
+        mav.addObject("groupPhotos", _imageDAO.findByNameOfGroup(name));
+		mav.addObject("group", _groupDAO.findByName(name));
 		mav.addObject("groups", _groupDAO.findAll());
         return mav;
     }
@@ -70,5 +72,6 @@ public class MainPageController {
         ModelAndView mav = new ModelAndView("contact");
         return mav;
     }
+
 
 }

@@ -12,12 +12,15 @@
 		<li><a href="${api_url}/contact">Contacts</a></li>
 	</ul>
 	<ul class="nav pull-right">
-	<li><a border="0" href="http://vkontakte.ru/"><img src="/webapptest/img/vk.jpg"></a></li>
-	<li><a border="0" href="http://www.facebook.com"><img src="/webapptest/img/fc.jpg"></a></li>
+		<li>
+			<div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="icon" 
+				data-yashareQuickServices="vkontakte,facebook,twitter,lj">
+			</div> 
+		</li>
 	</ul>
-	
-	
 	</div>	
-	
 </div>
 <br><br>
+
+
+<script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
